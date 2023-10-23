@@ -7,9 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{ % static 'js/index.js' %}"></script>
     <title>Django Render</title>
   </head>
   <body>
-    <h1 class="center">How to deploy Django to Render</h1>
+    <div>
+      <input type="button" value="カメラ起動" onclick="cameraInitSmartphoneSupport()">
+      <input type="button" value="撮影" onclick="shoot()">
+    </div>
+    <div>
+      <video id="camera" autoplay muted playsinline></video>
+      <canvas id="canvas" wcrossorigin="anonymous"></canvas>
+    </div>
   </body>
 </html>
